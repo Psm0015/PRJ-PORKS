@@ -29,7 +29,7 @@ public class Usuario {
     private String email;
 
     @Column(nullable = false, unique = true)
-    private String CPF;
+    private String cpf;
 
     @Column(nullable = false)
     private Date nascimento;
