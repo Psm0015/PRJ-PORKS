@@ -12,20 +12,11 @@ import com.Porks.Porks.Entity.Produto;
 import com.Porks.Porks.Repositories.ProdutoRepository;
 
 @RestController
-@RequestMapping("/prd")
-public class ProdutoControler {
+@RequestMapping("/adm")
+public class AdminController {
     
     @Autowired
     private ProdutoRepository pRepository;
-
-    @GetMapping("/listall")
-    public ResponseEntity<Iterable<Produto>> buscarprds(){
-        try {
-            return ResponseEntity.status(200).body(pRepository.findAll());
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body(null);
-        }
-    }
 
     @PostMapping("/cadprd")
     public ResponseEntity<String> cadastrarProduto(@RequestBody Produto prd){
