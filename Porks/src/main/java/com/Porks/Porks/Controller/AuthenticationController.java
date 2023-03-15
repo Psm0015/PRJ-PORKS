@@ -11,6 +11,7 @@ import com.Porks.Porks.Objects.AuthenticationRequest;
 import com.Porks.Porks.Objects.AuthenticationResponse;
 import com.Porks.Porks.Objects.RegisterRequest;
 import com.Porks.Porks.Service.AuthenticationService;
+import com.Porks.Porks.Service.Startapp;
 
 @RestController
 @RequestMapping("/auth")

@@ -35,7 +35,12 @@ public class AuthenticationService {
         user.setCpf(request.getCpf());
         user.setNascimento(request.getNascimento());
         user.setSenha(passwordEncoder.encode(request.getSenha()));
-        user.setRole(Role.USER);
+        System.out.println(repository.countusers());
+        if(repository.countusers() == 0){
+            user.setRole(Role.ADMIN);
+        }else{
+            user.setRole(Role.USER);
+        }
         repository.save(user);
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder().token(jwtToken).build();
