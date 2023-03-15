@@ -1,5 +1,6 @@
 package com.Porks.Porks.Security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -16,18 +17,22 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfiguration {
     
-    private final JwtAuthenticationFilter jwtAuthFilter;
-    private final AuthenticationProvider authenticationProvider;
+    @Autowired
+    private JwtAuthenticationFilter jwtAuthFilter;
+    @Autowired
+    private AuthenticationProvider authenticationProvider;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http){
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
         http
         .csrf()
         .disable()
         .authorizeHttpRequests()
-        .requestMatchers("")
-        .permitAll()
+        .requestMatchers("/auth/**").permitAll()
+        .requestMatchers("/convidado/**").permitAll()
+        .requestMatchers("/h2-console/").permitAll()
+        .requestMatchers("/user/**").hasAnyAuthority("USER", "ADMIN")
         .anyRequest()
         .authenticated()
         .and()
