@@ -45,6 +45,7 @@ public class Usuario implements UserDetails{
     @Column(nullable = false)
     private String senha;
 
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
