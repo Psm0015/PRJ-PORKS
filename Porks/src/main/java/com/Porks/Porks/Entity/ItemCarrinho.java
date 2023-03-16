@@ -1,10 +1,11 @@
 package com.Porks.Porks.Entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,15 +14,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Produto {
+public class ItemCarrinho {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    @Column(nullable = false)
-    private String nome;
-
-    @Column(nullable = false)
-    private String ingredientes;
-
+    
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private Usuario usuario;
+    
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Produto produto;
+    
+    private int quantity;
 }
