@@ -19,7 +19,7 @@ import com.Porks.Porks.Repositories.UserRepository;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
-    
+
     @Autowired
     private ProdutoRepository pRepository;
 
@@ -27,7 +27,7 @@ public class AdminController {
     private UserRepository uRepository;
 
     //////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////Usuários/////////////////////////////////
+    ///////////////////////////////// Usuários/////////////////////////////////
     //////////////////////////////////////////////////////////////////////////
 
     @GetMapping("/listall")
@@ -54,17 +54,17 @@ public class AdminController {
     }
 
     @DeleteMapping("/apgruser/{id}")
-    public ResponseEntity<String> apgruser(@PathVariable Integer id){
+    public ResponseEntity<String> apgruser(@PathVariable Integer id) {
         uRepository.deleteById(id);
         return ResponseEntity.ok().body("Usuário Deletado com Sucesso!");
     }
 
     //////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////Produtos/////////////////////////////////
+    ///////////////////////////////// Produtos/////////////////////////////////
     //////////////////////////////////////////////////////////////////////////
 
     @PostMapping("/cadprd")
-    public ResponseEntity<String> cadastrarProduto(@RequestBody Produto prd){
+    public ResponseEntity<String> cadastrarProduto(@RequestBody Produto prd) {
         try {
             pRepository.save(prd);
             return ResponseEntity.status(200).body("Produto cadastrado com sucesso!");
@@ -72,10 +72,23 @@ public class AdminController {
             return ResponseEntity.status(500).body(e.toString());
         }
     }
+
     @DeleteMapping("/apgrprd/{id}")
-    public ResponseEntity<String> apgrprd(@PathVariable Integer id){
+    public ResponseEntity<String> apgrprd(@PathVariable Integer id) {
         pRepository.deleteById(id);
         return ResponseEntity.ok().body("Produto Deletado com Sucesso!");
     }
 
+    @PutMapping("/editarprd")
+    public ResponseEntity<?> editarProduto(@RequestBody Produto prd) {
+        try {
+            Produto prdb = pRepository.findById(prd.getId()).get();
+            prdb.setIngredientes(prd.getIngredientes());
+            prdb.setNome(prd.getNome());
+            pRepository.save(prdb);
+            return ResponseEntity.ok().body("Produto editado com sucesso!");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e);
+        }
+    }
 }
