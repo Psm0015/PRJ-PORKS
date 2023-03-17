@@ -12,9 +12,9 @@ Admin{
  PUT : http://localhost:8080/admin/editarprd -- Editar Produto
  Body Json[
   {
-	  "id":1552,
-	  "nome":"teste1",
-	  "ingredientes":"teste1"
+	  "id":id,
+	  "nome":"nome",
+	  "ingredientes":"ingredientes"
   }
  ]
  
@@ -24,8 +24,8 @@ Admin{
  POST : http://localhost:8080/admin/cadprd -- Cadastrar Produto
  Body Json[
   {
-	  "nome":"teste",
-	  "ingredientes":"teste"
+	  "nome":"nome",
+	  "ingredientes":"ingredientes"
   }
  ]
  
@@ -42,10 +42,10 @@ Usuário{
   PUT : http://localhost:8080/user/editar -- Editar seu Usuário
   Body Json[
     {
-	    "nome":"Pedro Mota2",
-	    "email":"pedro.mota2@df.estudante.senai.br",
-	    "cpf":"074520561592",
-	    "nascimento":"2003-06-29"
+	    "nome":"nome",
+	    "email":"email",
+	    "cpf":"cpf",
+	    "nascimento":"data"
     }
   ]
   
@@ -63,8 +63,8 @@ Autenticação{
   POST : http://localhost:8080/auth/login -- Faz Login
    Body Json{
     {
-	    "cpf":"07452056159",
-	    "senha":"123010203"
+	    "cpf":"cpf",
+	    "senha":"senha"
     }
    }
    
@@ -73,11 +73,11 @@ Autenticação{
    POST : http://localhost:8080/auth/registrar -- Se Registra
    Body Json{
     {
-	    "nome":"Pedro Mota",
-	    "email":"pedro.mota@df.estudante.senai.br",
-	    "cpf":"07452056159",
-	    "nascimento":"2003-06-29",
-	    "senha":"123010203"
+	    "nome":"nome",
+	    "email":"email",
+	    "cpf":"cpf",
+	    "nascimento":"data",
+	    "senha":"senha"
     }
    }
    
