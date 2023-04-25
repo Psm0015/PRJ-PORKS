@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+80s+Fade&family=Rubik+Puddles&family=Rye&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background-image: url('Imgs/fca33f325c82e5d9faa4d85913028b1d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main{
+    background-image: url(Imgs/wallpaper.p2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 30vw;
+    top: 40px;
+    transform: skew(1.7deg);
+    box-shadow: 0px 1px 60px black;
+}
+
+
+
+#perfil{
+    width: 30%;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    top: 8vh;
+    left: 160px;
+    border: 7px dashed;
+    border-color: rgb(0, 0, 0);
+    transform: rotate(1.3deg);
+    box-shadow: 0px 0px 10px;
+}
+
+#text-perf{
+    font-family: 'rye';
+    position: absolute;
+    top: 230px;
+    left: 145px;
+}
+
+#email-login::placeholder{
+  position: relative;
+  left: 70px;
+  border: none;
+}
+
+ input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+
+}
+
+textarea{
+    left: 90px;
+    position: relative;
+}
+
+#email-login{
+    border: none;
+    width: 200px;
+    background: rgba(239, 234, 234, 0.746);
+    height: 40px;
+    background-image: url('Imgs/login-1.png');
+    background-size: 200px 40px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border-radius: 40px;
+    display: block;
+    position: relative;
+    top: 60px;
+    padding: 5px 10px;
+}
+
+#senha-login{
+    border: none;
+    width: 200px;
+    background: rgba(239, 234, 234, 0.746);
+    height: 40px;
+    background-image: url('Imgs/login-1.png');
+    background-size: 200px 40px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border-radius: 40px;
+    display: block;
+    position: relative;
+    top: 80px;
+    padding: 5px 10px;
+}
+
+#senha-login::placeholder{
+    position: relative;
+    left: 70px;
+    border: none;
+    
+  }
+
+.BT{
+    display: block;
+    position: relative;
+    top: 120px;
+    left: 55px;
+    width: 100px;
+    box-shadow: 3px 2px 7px black;
+    
+}
+
+button{
+    background-image: url('Imgs/Opera\ Instantâneo_2023-01-07_102155_img.freepik.com.png');
+    border: none;
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+    border: 0.5px dashed;
+    cursor: pointer;
+}
+
+#text-senha{
+    font-size: 15px;
+    position: relative;
+    top: 140px;
+    right: 10px;
+    
+    text-decoration: none;
+    
+}
+
+#H-1-2{
+    color: black;
+    font-family: 'rye';
+}
+
+
+#H-1{
+    color: black;
+    font-family: 'rye';
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
