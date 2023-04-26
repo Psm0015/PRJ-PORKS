@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Design.Css">
-    
+
     <title>Porks.com</title>
 </head>
+
 <body>
 
     <nav class="Nav-bar">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
-            <i class="Buttom-bar" >&#9776</i>
+            <i class="Buttom-bar">&#9776</i>
         </label>
         <label class="logo"><a href="#start"><img id="Logo-img"></a></label>
         <ul id="ul-1">
             <li class="li-1"><a class="a-1" href="#P-2">Petiscos</a></li>
             <li class="li-1"><a class="a-1" href="#drinks">Drinks</a></li>
             <li class="li-1"><a class="a-1" href="">Localizações/ contatos</a></li>
-            <li class="li-1" id="icon-anima"><a class="a-int-2" id="Icon-cont" href="login-1.html"> <img src="Imgs/conta-verificada (1).png" src="conta-verificada (1).png" alt=""></a></li>
-            <li class="li-1" id="icon-anima"><a class="a-int-1" id="Icon-comp" href=""><img src="Imgs/carrinho-de-compras.png" src="carrinho-de-compras.png" ></a></li>
+            <li class="li-1" id="icon-anima"><a class="a-int-2" id="Icon-cont" onclick="loginmodal()"> <img
+                        src="Imgs/conta-verificada (1).png" src="conta-verificada (1).png" alt=""></a></li>
+            <li class="li-1" id="icon-anima"><a class="a-int-1" id="Icon-comp" href=""><img
+                        src="Imgs/carrinho-de-compras.png" src="carrinho-de-compras.png"></a></li>
         </ul>
     </nav>
- 
+
 
     <div class="Page-1" id="start">
-        
+
         <div id="borda_esquerda" class="Bord-left"></div>
-      <style id="x">
-        
-      </style>
+        <style id="x">
 
-       
-
-        
+        </style>
 
 
-    <div class="content">
-    
-        <div class="slides">
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-            <input type="radio" name="slide" id="slide5">
-            <input type="radio" name="slide" id="slide6">
-            <input type="radio" name="slide" id="slide7">
-            <input type="radio" name="slide" id="slide8">
-            <input type="radio" name="slide" id="slide9">
 
-            <div class="slide s1" id="img1">
-                <img src="./Imgs/letreiro.png" ,src="letreiro.png">
+
+
+
+        <div class="content">
+
+            <div class="slides">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <input type="radio" name="slide" id="slide4">
+                <input type="radio" name="slide" id="slide5">
+                <input type="radio" name="slide" id="slide6">
+                <input type="radio" name="slide" id="slide7">
+                <input type="radio" name="slide" id="slide8">
+                <input type="radio" name="slide" id="slide9">
+
+                <div class="slide s1" id="img1">
+                    <img src="./Imgs/letreiro.png" ,src="letreiro.png">
+                </div>
+                <div class="slide" id="img2">
+                    <img src="./Imgs/chop.jpg" ,src="chop.jpg">
+                </div>
+                <div class="slide" id="img3">
+                    <img src="./Imgs/Petiscos3.jpg" ,src="Petiscos3.jpg">
+                </div>
+                <div class="slide" id="img4">
+                    <img src="./Imgs/Hamburguer.jpg" ,src="Hamburguer.jpg">
+                </div>
+                <div class="slide" id="img5">
+                    <img src="Imgs/Hamburguer-2.jpeg" ,src="Hamburguer-2.jpeg">
+                </div>
+
             </div>
-            <div class="slide" id="img2">
-                <img src="./Imgs/chop.jpg" ,src="chop.jpg">
+
+            <div class="navegar">
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+                <label class="bar" for="slide3"></label>
+                <label class="bar" for="slide4"></label>
+                <label class="bar" for="slide5"></label>
+
             </div>
-            <div class="slide" id="img3">
-                <img src="./Imgs/Petiscos3.jpg" ,src="Petiscos3.jpg">
-            </div>
-            <div class="slide" id="img4">
-                <img src="./Imgs/Hamburguer.jpg" ,src="Hamburguer.jpg">
-            </div>
-            <div class="slide" id="img5">
-                <img src="Imgs/Hamburguer-2.jpeg" ,src="Hamburguer-2.jpeg">
-            </div>
-        
         </div>
-
-        <div class="navegar">
-            <label class="bar" for="slide1"></label>
-            <label class="bar" for="slide2"></label>
-            <label class="bar" for="slide3"></label>
-            <label class="bar" for="slide4"></label>
-            <label class="bar" for="slide5"></label>
-          
-        </div>
-    </div>
     </div>
 
     <div class="TEXT-RP">
 
-       <h1 id="TEXT-RP">PORKS <BR>
-    <span id="TEXT_SPAN">Faça da sua refeição a melhor</span> </h1>
+        <h1 id="TEXT-RP">PORKS <BR>
+            <span id="TEXT_SPAN">Faça da sua refeição a melhor</span>
+        </h1>
 
     </div>
 
@@ -96,132 +102,171 @@
 
     <div class="Page-2" id="P-2">
         <div class="Cont-P2">
-            
-            
+
+
 
             <div class="Petiscos" id="PP-T">
-                <div class="Nav-Page-2"><h1 id="PT-T">Petiscos</h1></div>
-                
-                
+                <div class="Nav-Page-2">
+                    <h1 id="PT-T">Petiscos</h1>
+                </div>
+
+
                 <ul class="Card-main">
                     <li class="li-2">
                         <p></p>
                     </li>
                     <div class="Card-left">
-                        
-                        <li class="li-2"><p class="itens-P">OLDWEST BURGER <span>(R$ 17)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B"> (Hambúrguer de costelinha de porco (ou vegetariano), maionese, queijo,canastra, geleia de pimenta e rúcula )</span>
-                        </p>
-                        
+
+                        <li class="li-2">
+                            <p class="itens-P">OLDWEST BURGER <span>(R$ 17)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B"> (Hambúrguer de costelinha de porco (ou vegetariano), maionese,
+                                    queijo,canastra, geleia de pimenta e rúcula )</span>
+                            </p>
+
                         </li>
-                        <li class="li-2"><p class="itens-P">PORKS BACON BURG <span>(R$ 17)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-2"> ( Hambúrguer de costelinha de porco (ou vegetariano), maionese, creme de cheddar e tiras de bacon crocantes )</span>
-                        </p>
+                        <li class="li-2">
+                            <p class="itens-P">PORKS BACON BURG <span>(R$ 17)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-2"> ( Hambúrguer de costelinha de porco (ou vegetariano), maionese, creme
+                                    de cheddar e tiras de bacon crocantes )</span>
+                            </p>
                         </li>
-                        <li class="li-2"><p class="itens-P">PORK BURRITO <span>(R$ 20)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-3"> ( Burrito mexicano recheado de pernil desfiado, cheddar, sour cream, cebola caramelizada e chips de batata )</span>
-                        </p>
+                        <li class="li-2">
+                            <p class="itens-P">PORK BURRITO <span>(R$ 20)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-3"> ( Burrito mexicano recheado de pernil desfiado, cheddar, sour cream,
+                                    cebola caramelizada e chips de batata )</span>
+                            </p>
                         </li>
-                        <li class="li-2"><p class="itens-P">PERNIL MUNICIPAL <span>(R$ 16)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-4"> ( Sanduiche de pernil de porco marinado por 12h, coberto por quiejo mazzarella, maionese e cheiro verde )</span>
-                        </p>
+                        <li class="li-2">
+                            <p class="itens-P">PERNIL MUNICIPAL <span>(R$ 16)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-4"> ( Sanduiche de pernil de porco marinado por 12h, coberto por quiejo
+                                    mazzarella, maionese e cheiro verde )</span>
+                            </p>
                         </li>
-                        <li class="li-2"><p class="itens-P">COSTELINHA BBQ <span>(R$ 22)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-5"> ( Suculentas costelinhas de porco ao molho BBQ com cerveja defumada )</span>
-                        </p>
-                        
+                        <li class="li-2">
+                            <p class="itens-P">COSTELINHA BBQ <span>(R$ 22)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-5"> ( Suculentas costelinhas de porco ao molho BBQ com cerveja defumada
+                                    )</span>
+                            </p>
+
                         </li>
-                        <li class="li-2"><p class="itens-P">LINGUICINHA ARTESANAL <span>(R$ 18)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-6"> ( Linguiça de pernil e especiarias regionais, cortada para petisco servida com limão à francesa )</span> 
-                        </p>
-                        
+                        <li class="li-2">
+                            <p class="itens-P">LINGUICINHA ARTESANAL <span>(R$ 18)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-6"> ( Linguiça de pernil e especiarias regionais, cortada para petisco
+                                    servida com limão à francesa )</span>
+                            </p>
+
                         </li>
-                        <li class="li-2"><p class="itens-P">PORKSPÓCA <span>(R$ 10)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-7"> ( Pururuca de porco crocante temperada com sal de lemon pepper )</span> 
-                        </p>
-                        
+                        <li class="li-2">
+                            <p class="itens-P">PORKSPÓCA <span>(R$ 10)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-7"> ( Pururuca de porco crocante temperada com sal de lemon pepper
+                                    )</span>
+                            </p>
+
                         </li>
-                        <li class="li-2"><p class="itens-P">ESPETINHO DE PANCETA <span>(R$ 20)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-8"> ( Quatro espetinhos de panceta servidos com maionese de lemon pepper )</span>
-                        </p>
-                        
+                        <li class="li-2">
+                            <p class="itens-P">ESPETINHO DE PANCETA <span>(R$ 20)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-8"> ( Quatro espetinhos de panceta servidos com maionese de lemon pepper
+                                    )</span>
+                            </p>
+
                         </li>
-                        <li class="li-2"><p class="itens-P">TORRESMO DE TIRA <span>(R$ 17)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-9"> ( O tradicional torresminho, porém servido em tiras crocantes e sal de lemon pepper )</span>
-                        </p>
-                        
+                        <li class="li-2">
+                            <p class="itens-P">TORRESMO DE TIRA <span>(R$ 17)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-9"> ( O tradicional torresminho, porém servido em tiras crocantes e sal de
+                                    lemon pepper )</span>
+                            </p>
+
                         </li>
-                        <li class="li-2"><p class="itens-P">TORRESMO MINEIRO <span>(R$ 18)</span><br>
-                            <a href="" id="Select-itens">Selecionar</a>
-                            <span id="O-B-20"> ( O tradicional torresminho frito mineiro, temperado na cachaça e crocante )</span>
-                        </p>
-                        
+                        <li class="li-2">
+                            <p class="itens-P">TORRESMO MINEIRO <span>(R$ 18)</span><br>
+                                <a href="" id="Select-itens">Selecionar</a>
+                                <span id="O-B-20"> ( O tradicional torresminho frito mineiro, temperado na cachaça e
+                                    crocante )</span>
+                            </p>
+
                         </li>
-                        
+
                     </div>
-                    
-                   <div class="Card-right">
-                    <li class="li-2"><p class="itens-P">MIX DE TORRESMO <span>(R$ 20)</span><br>
-                        <a href="" id="Select-itens-2">Selecionar</a>
-                        <span id="O-B-10"> ( Porkspóca + Torresmo Mineiro + Torresmo de tira )</span> 
-                    </p>
-                    
-                    </li>
-                    <li class="li-2"><p class="itens-P">BEI COM MELADO <span>(R$ 16)</span><br>
-                        <a href="" id="Select-itens-2">Selecionar</a>
-                        <span id="O-B-11"> ( Tiras de bacon crocante cobertas com melado de cana de açúcar )</span>  
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">BOLINHO DE MACAXEIRA COM CARNE SECA <span>(R$ 22)</span><br>
-                        <a href="" id="Select-itens-2">Selecionar</a>
-                        <span id="O-B-12"> ( Meia dúzia de bolinhos de "mandioca", "aipim", "macaxeira", rechados com carne seca )</span>  
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">COXINHA DE LINGUIÇA DEFUMADA <span>(R$ 20)</span><br> 
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                         <span id="O-B-13"> ( Meia dúzia de coxinhas artesanais rechadas com linguicinha defumada )</span>  
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">PASTELZINHO <span>(R$ 20)</span><br> 
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                         <span id="O-B-14"> ( Meia dúzia de gyoza, tradicional pastelzinho japônes frito, rechado com carne suina )</span>  
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">BATATA TROPEIRA <span>(R$ 22)</span><br>
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                         <span id="O-B-15"> ( Batata rústica coberta por pernil desfiado e molho barbecue )</span>  
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">FISH AND CHIPS <span>(R$ 22)</span><br>
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                         <span id="O-B-16"> ( Iscas de tilápia à milanesa com batata rústica e maionese caseira de limão )</span>  
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">BATATA RÚSTICA <span>(R$ 16)</span><br> 
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                         
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">BATATA RÚSTICA CHEDDAR E BACON <span>(R$ 20)</span><br> 
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                           
-                   </p>
-                   </li>
-                   <li class="li-2"><p class="itens-P">CHURROS ESPANHOL <span>(R$ 18)</span><br> 
-                         <a href="" id="Select-itens-2">Selecionar</a>
-                         <span id="O-B-19"> ( Varetas de churros com canela e açúcar servidas com doce de leite )</span> 
-                   </p>
-                   </li>
-                   </div>
+
+                    <div class="Card-right">
+                        <li class="li-2">
+                            <p class="itens-P">MIX DE TORRESMO <span>(R$ 20)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-10"> ( Porkspóca + Torresmo Mineiro + Torresmo de tira )</span>
+                            </p>
+
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">BEI COM MELADO <span>(R$ 16)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-11"> ( Tiras de bacon crocante cobertas com melado de cana de açúcar
+                                    )</span>
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">BOLINHO DE MACAXEIRA COM CARNE SECA <span>(R$ 22)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-12"> ( Meia dúzia de bolinhos de "mandioca", "aipim", "macaxeira",
+                                    rechados com carne seca )</span>
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">COXINHA DE LINGUIÇA DEFUMADA <span>(R$ 20)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-13"> ( Meia dúzia de coxinhas artesanais rechadas com linguicinha defumada
+                                    )</span>
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">PASTELZINHO <span>(R$ 20)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-14"> ( Meia dúzia de gyoza, tradicional pastelzinho japônes frito, rechado
+                                    com carne suina )</span>
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">BATATA TROPEIRA <span>(R$ 22)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-15"> ( Batata rústica coberta por pernil desfiado e molho barbecue
+                                    )</span>
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">FISH AND CHIPS <span>(R$ 22)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-16"> ( Iscas de tilápia à milanesa com batata rústica e maionese caseira
+                                    de limão )</span>
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">BATATA RÚSTICA <span>(R$ 16)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">BATATA RÚSTICA CHEDDAR E BACON <span>(R$ 20)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+
+                            </p>
+                        </li>
+                        <li class="li-2">
+                            <p class="itens-P">CHURROS ESPANHOL <span>(R$ 18)</span><br>
+                                <a href="" id="Select-itens-2">Selecionar</a>
+                                <span id="O-B-19"> ( Varetas de churros com canela e açúcar servidas com doce de leite
+                                    )</span>
+                            </p>
+                        </li>
+                    </div>
                 </ul>
 
 
@@ -238,116 +283,138 @@
     <div class="Page-3" id="drinks">
 
         <div class="Petiscos" id="PP-T-2">
-            <div class="Nav-Page-2"><h1 id="PT-T">Drinks</h1></div>
-            
-            
+            <div class="Nav-Page-2">
+                <h1 id="PT-T">Drinks</h1>
+            </div>
+
+
             <ul class="Card-main">
                 <li class="li-2">
                     <p></p>
                 </li>
                 <div class="Card-left">
-                    
-                    <li class="li-2"><p class="itens-P">TROPICAL GIN <span>(R$ 28)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D"> ( Gin, Red Bull Tropical e fatia de laranja)</span>
-                    </p>
-                    
+
+                    <li class="li-2">
+                        <p class="itens-P">TROPICAL GIN <span>(R$ 28)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D"> ( Gin, Red Bull Tropical e fatia de laranja)</span>
+                        </p>
+
                     </li>
-                    <li class="li-2"><p class="itens-P">LADY PIG <span>(R$ 25)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-2"> ( Gin, Tônica xarope de morango e fatia de limão )</span>
-                    </p>
+                    <li class="li-2">
+                        <p class="itens-P">LADY PIG <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-2"> ( Gin, Tônica xarope de morango e fatia de limão )</span>
+                        </p>
                     </li>
-                    <li class="li-2"><p class="itens-P">MOSCOW MULE <span>(R$ 28)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-3"> ( Vodka, xarope de gengibre e suco de limão coberto com espuma de gengibre )</span>
-                    </p>
+                    <li class="li-2">
+                        <p class="itens-P">MOSCOW MULE <span>(R$ 28)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-3"> ( Vodka, xarope de gengibre e suco de limão coberto com espuma de gengibre
+                                )</span>
+                        </p>
                     </li>
-                    <li class="li-2"><p class="itens-P">VALERIE GIN <span>(R$ 28)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-4"> ( Gin, tônica, xarope de frutas vermelhas coberto por espuma de gengibre )</span>
-                    </p>
+                    <li class="li-2">
+                        <p class="itens-P">VALERIE GIN <span>(R$ 28)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-4"> ( Gin, tônica, xarope de frutas vermelhas coberto por espuma de gengibre
+                                )</span>
+                        </p>
                     </li>
-                    <li class="li-2"><p class="itens-P">GIN TÔNICA <span>(R$ 22)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        
-                    </p>
-                    
+                    <li class="li-2">
+                        <p class="itens-P">GIN TÔNICA <span>(R$ 22)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+
+                        </p>
+
                     </li>
-                    <li class="li-2"><p class="itens-P">CAIPIRINHA DE MORANGO <span>(R$ 25)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-6"> ( Vodka ou Cachaça )</span> 
-                    </p>
-                    
+                    <li class="li-2">
+                        <p class="itens-P">CAIPIRINHA DE MORANGO <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-6"> ( Vodka ou Cachaça )</span>
+                        </p>
+
                     </li>
-                    <li class="li-2"><p class="itens-P">CAIPIRINHA DE LIMÃO <span>(R$ 22)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-7"> ( Vodka ou Cachaça )</span> 
-                    </p>
-                    
+                    <li class="li-2">
+                        <p class="itens-P">CAIPIRINHA DE LIMÃO <span>(R$ 22)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-7"> ( Vodka ou Cachaça )</span>
+                        </p>
+
                     </li>
-                    <li class="li-2"><p class="itens-P">SAQUERINHA DE MORANGO <span>(R$ 28)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-8"> ( Saquê, morango e açucar )</span>
-                    </p>
-                    
+                    <li class="li-2">
+                        <p class="itens-P">SAQUERINHA DE MORANGO <span>(R$ 28)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-8"> ( Saquê, morango e açucar )</span>
+                        </p>
+
                     </li>
-                    <li class="li-2"><p class="itens-P">MELANCIA ATÔMICA <span>(R$ 28)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-9"> ( Dose de gin ou vodka, limão e Red Bull Melancia )</span>
-                    </p>
-                    
+                    <li class="li-2">
+                        <p class="itens-P">MELANCIA ATÔMICA <span>(R$ 28)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-9"> ( Dose de gin ou vodka, limão e Red Bull Melancia )</span>
+                        </p>
+
                     </li>
-                    <li class="li-2"><p class="itens-P">C#UP@ ESSA MANGA <span>(R$ 25)</span><br>
-                        <a href="" id="Select-itens">Selecionar</a>
-                        <span id="O-D-10"> ( Suco de manga, vodka e pimenta rosa )</span> 
-                    </p>
-                    
+                    <li class="li-2">
+                        <p class="itens-P">C#UP@ ESSA MANGA <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens">Selecionar</a>
+                            <span id="O-D-10"> ( Suco de manga, vodka e pimenta rosa )</span>
+                        </p>
+
                     </li>
                 </div>
-                
-               <div class="Card-right">
-                <li class="li-2"><p class="itens-P">DALE PINK VODKA LEMONADE <span>(R$ 25)</span><br>
-                    <a href="" id="Select-itens-2">Selecionar</a>
-                    <span id="O-D-11"> ( Suco de morango, suco de limão e vodka )</span>  
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P">APPLE PIE <span>(R$ 25)</span><br>
-                    <a href="" id="Select-itens-2">Selecionar</a>
-                    <span id="O-D-12"> ( Vodka Bacco, licor de canela, maçã verde e limão )</span>  
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P">COSMOPOLITAN <span>(R$ 25)</span><br> 
-                     <a href="" id="Select-itens-2">Selecionar</a>
-                     <span id="O-D-13"> ( Vodka Bacco, Cointreau, limão e cranberry )</span>  
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P">PORKS FIRE <span>(R$ 25)</span><br> 
-                     <a href="" id="Select-itens-2">Selecionar</a>
-                     <span id="O-D-14"> ( Licor de canela com Vodka e suco de maracujá )</span>  
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P"> JACK & COKE <span>(R$ 30)</span> <br>
-                     <a href="" id="Select-itens-2">Selecionar</a>
-                     <span id="O-D-15"> ( Jack Daniel's e Coca-Cola )</span>  
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P">SHOT TEQUILA <span>(R$ 20)</span><br>
-                     <a href="" id="Select-itens-2">Selecionar</a>
-                      
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P">SODA ITALIANA(NÃO ALCOOLICO) <span>(R$ 15)</span><br> 
-                     <a href="" id="Select-itens-2">Selecionar</a>
-                     <span id="O-D-18"> ( Maçã verde, morango, frutas vermelhas ou limão siciliano )</span>  
-               </p>
-               </li>
-               <li class="li-2"><p class="itens-P">RED BULL <span>(R$ 15)</span><br> 
-                     <a href="" id="Select-itens-2">Selecionar</a>
-                     <span id="O-D-19"> ( Sugar Free, Tropical ou Melancia )</span> 
-               </p>
-               </li>
-               </div>
+
+                <div class="Card-right">
+                    <li class="li-2">
+                        <p class="itens-P">DALE PINK VODKA LEMONADE <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-11"> ( Suco de morango, suco de limão e vodka )</span>
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P">APPLE PIE <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-12"> ( Vodka Bacco, licor de canela, maçã verde e limão )</span>
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P">COSMOPOLITAN <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-13"> ( Vodka Bacco, Cointreau, limão e cranberry )</span>
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P">PORKS FIRE <span>(R$ 25)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-14"> ( Licor de canela com Vodka e suco de maracujá )</span>
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P"> JACK & COKE <span>(R$ 30)</span> <br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-15"> ( Jack Daniel's e Coca-Cola )</span>
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P">SHOT TEQUILA <span>(R$ 20)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P">SODA ITALIANA(NÃO ALCOOLICO) <span>(R$ 15)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-18"> ( Maçã verde, morango, frutas vermelhas ou limão siciliano )</span>
+                        </p>
+                    </li>
+                    <li class="li-2">
+                        <p class="itens-P">RED BULL <span>(R$ 15)</span><br>
+                            <a href="" id="Select-itens-2">Selecionar</a>
+                            <span id="O-D-19"> ( Sugar Free, Tropical ou Melancia )</span>
+                        </p>
+                    </li>
+                </div>
             </ul>
 
 
@@ -358,10 +425,32 @@
         </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-    crossorigin="anonymous"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="lgmdl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Meu Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 id="tt"></h6>
+                    <p id="emailmodal"></p>
+                    <p id="nascimentomodal"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button onclick="encerrarSessao()" type="button" class="btn btn-danger">Sair</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="PP.js"></script>
 
 </body>
+
 </html>
