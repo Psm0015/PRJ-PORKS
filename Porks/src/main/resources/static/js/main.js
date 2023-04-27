@@ -13,24 +13,27 @@ function dadosusr() {
                 sessionStorage.setItem("cpf", response.cpf)
                 sessionStorage.setItem("role", response.role)
                 let datansc = new Date(response.nascimento);
-                let dia = datansc.getDate()+1;
+                let dia = datansc.getDate() + 1;
                 let mes = datansc.getMonth() + 1; // Adiciona 1 pois o mês começa em zero
                 let ano = datansc.getFullYear();
-    
+
                 let dataFormatada = dia + "/" + mes + "/" + ano;
                 sessionStorage.setItem("nascimento", dataFormatada);
                 document.getElementById('tt').innerHTML = `Olá, ${response.nome}`
                 document.getElementById('emailmodal').innerHTML = `Email: ${response.email}`
                 document.getElementById('nascimentomodal').innerHTML = `Data de Nascimento: ${dataFormatada}`
+                if (response.role == 'ADMIN') {
+                    document.getElementById('mdbody').innerHTML += `<a href="adminpg.html">Página do Administrador</a>`
+                }
             }
-            
+
         });
     }
 }
 function loginmodal() {
     if (sessionStorage.getItem("token") != null) {
         $('#lgmdl').modal('show');
-    }else{
+    } else {
         window.location.href = 'login-1.html'
     }
 }
