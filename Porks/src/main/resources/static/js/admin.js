@@ -29,6 +29,7 @@ function carregatb() {
             tbdata += `<td>${prd.id}</td>`
             tbdata += `<td>${prd.nome}</td>`
             tbdata += `<td>${prd.ingredientes}</td>`
+            tbdata += `<td>${prd.categoria}</td>`
             tbdata += `<td><i onclick='deletarprd(${prd.id})' style='color: red;cursor: pointer;' class="fa fa-trash" aria-hidden="true"></i></td>`
             tbdata += '</tr>'
         }
@@ -38,7 +39,8 @@ function carregatb() {
 function cadastro() {
     const data = JSON.stringify({
         "nome": document.getElementById('nomemd').value,
-        "ingredientes": document.getElementById('ingredientesmd').value
+        "ingredientes": document.getElementById('ingredientesmd').value,
+        "categoria": document.getElementById('categoriamd').value
     });
 
     $.ajax({
@@ -54,6 +56,7 @@ function cadastro() {
             carregatb()
             document.getElementById('nomemd').value = ''
             document.getElementById('ingredientesmd').value = ''
+            document.getElementById('categoriamd').value = ''
             $('#novoprd').modal('hide')
         },
         error: function (response) {
