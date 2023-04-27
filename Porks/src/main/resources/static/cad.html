@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="Form.css">
     <title>Login</title>
 </head>
+
 <body>
 
     <div class="T-P">
@@ -19,51 +21,55 @@
 
         <fieldset class="N-C">
             <div class="Item">
-                
-                <input type="text" name="nome" id="nome" class="IT-1" placeholder="Nome" >
+
+                <input type="text" name="nome" id="nome" class="IT-1" placeholder="Nome">
             </div>
-             <div class="Item">
-                
+            <div class="Item">
+
                 <input type="text" name="sobrenome" id="sobrenome" class="IT-1" placeholder="Sobrenome">
-             </div>
+            </div>
         </fieldset>
 
         <div class="Item">
-            
+
             <input type="email" name="email" id="email" class="IT-1" placeholder="Email">
         </div>
 
         <div class="Item">
-            
+
             <input type="text" name="CPF" id="CPF" class="IT-1" placeholder="CPF">
-            
+
         </div>
 
         <div class="Item">
-            
+
             <input type="text" name="senha" id="senha" class="IT-1" placeholder="Senha">
-            
+
         </div>
 
         <div class="Item">
-            
+
             <input type="text" name="confi-senha" id="Con-senha" class="IT-1" placeholder="Confirmar senha">
-            
+
         </div>
 
         <div class="Item" id="Nasc">
             <label>Nascimento</label>
             <br>
-            <input type="date" id="birth" class="IT-1"/>
-              
+            <input type="date" id="birth" class="IT-1" />
+
         </div>
 
-        <div class="Item"><a href=""><button id="BT">Confirmar</button></a></div>
+        <div class="Item"><a onclick="cadastrar()" id="BT">Confirmar</a></div>
 
     </form>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="js/cadastro.js"></script>
     <script src="PP.Js"> </script>
-    
+
 </body>
+
 </html>

@@ -23,6 +23,7 @@ function dadosusr() {
                 document.getElementById('emailmodal').innerHTML = `Email: ${response.email}`
                 document.getElementById('nascimentomodal').innerHTML = `Data de Nascimento: ${dataFormatada}`
             }
+            
         });
     }
 }
