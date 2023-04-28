@@ -1,5 +1,5 @@
 function verificarauth() {
-    tk= sessionStorage.getItem('token')
+    tk = sessionStorage.getItem("token")
     $.ajax({
         type: "GET",
         url: "user/info",
@@ -17,6 +17,10 @@ function verificarauth() {
 }
 verificarauth()
 
+function formatarReal(numero) {
+    return "R$ " + numero.toFixed(2).replace(".", ",");
+}
+
 function carregatb() {
     $.get("convidado/listall", function (data, status) {
         tbdata = ''
@@ -29,6 +33,7 @@ function carregatb() {
             tbdata += `<td>${prd.id}</td>`
             tbdata += `<td>${prd.nome}</td>`
             tbdata += `<td>${prd.ingredientes}</td>`
+            tbdata += `<td>${formatarReal(prd.preco)}</td>`
             tbdata += `<td>${prd.categoria}</td>`
             tbdata += `<td><i onclick='deletarprd(${prd.id})' style='color: red;cursor: pointer;' class="fa fa-trash" aria-hidden="true"></i></td>`
             tbdata += '</tr>'
@@ -40,6 +45,7 @@ function cadastro() {
     const data = JSON.stringify({
         "nome": document.getElementById('nomemd').value,
         "ingredientes": document.getElementById('ingredientesmd').value,
+        "preco": document.getElementById('precomd').value,
         "categoria": document.getElementById('categoriamd').value
     });
 
@@ -50,13 +56,14 @@ function cadastro() {
         contentType: "application/json",
         headers: {
             "cookie": "JSESSIONID=DE5FA346853874788469CE9BCBEFDEC5",
-            "Authorization": `Bearer ${sessionStorage.getItem('token')}`
+            "Authorization": `Bearer ${sessionStorage.getItem("token")}`
         },
         success: function () {
             carregatb()
             document.getElementById('nomemd').value = ''
             document.getElementById('ingredientesmd').value = ''
             document.getElementById('categoriamd').value = ''
+            document.getElementById('precomd').value = ''
             $('#novoprd').modal('hide')
         },
         error: function (response) {

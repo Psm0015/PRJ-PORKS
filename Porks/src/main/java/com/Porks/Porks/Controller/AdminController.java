@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.Porks.Porks.Entity.Produto;
 import com.Porks.Porks.Entity.Usuario;
+import com.Porks.Porks.Repositories.CarrinhoRepository;
 import com.Porks.Porks.Repositories.ProdutoRepository;
 import com.Porks.Porks.Repositories.UserRepository;
+
+import jakarta.transaction.Transactional;
 
 @RestController
 @RequestMapping("/admin")
@@ -22,6 +25,9 @@ public class AdminController {
 
     @Autowired
     private ProdutoRepository pRepository;
+
+    @Autowired
+    private CarrinhoRepository cRepository;
 
     @Autowired
     private UserRepository uRepository;
@@ -74,7 +80,10 @@ public class AdminController {
     }
 
     @DeleteMapping("/apgrprd/{id}")
+    @Transactional
     public ResponseEntity<String> apgrprd(@PathVariable Integer id) {
+        Produto prd = pRepository.findById(id).get();
+        cRepository.deleteByProduto(prd);
         pRepository.deleteById(id);
         return ResponseEntity.ok().body("Produto Deletado com Sucesso!");
     }

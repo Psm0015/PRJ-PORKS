@@ -1,8 +1,5 @@
 package com.Porks.Porks.Entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,26 +23,9 @@ public class Carrinho {
     @ManyToOne
     private Usuario usuario;
 
-    @ManyToMany
-    private List<Produto> produtos;
+    @ManyToOne
+    private Produto produto;
 
     private int quantidade;
-
-    public Carrinho(Usuario usuario, Produto produto, int quantidade) {
-        this.usuario = usuario;
-        this.produtos = new ArrayList<>();
-        this.produtos.add(produto);
-        this.quantidade = quantidade;
-    }
-
-    public void adicionarProduto(Produto produto, int quantidade) {
-        this.produtos.add(produto);
-        this.quantidade += quantidade;
-    }
-
-    public void removerProduto(Produto produto, int quantidade) {
-        this.produtos.remove(produto);
-        this.quantidade -= quantidade;
-    }
 
 }

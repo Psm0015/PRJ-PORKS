@@ -1,5 +1,7 @@
 package com.Porks.Porks.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -65,23 +67,21 @@ public class UserController {
         Usuario usuario = (Usuario) authentication.getPrincipal();
         Produto produto = pRepository.findById(produtoId)
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
-        Carrinho carrinho = cRepository.findByUsuario(usuario);
-
-        if (carrinho == null) {
-            carrinho = new Carrinho(usuario, produto, quantidade);
-        } else {
-            carrinho.adicionarProduto(produto, quantidade);
-        }
+        Carrinho carrinho = new Carrinho();
+        carrinho.setProduto(produto);
+        carrinho.setQuantidade(quantidade);
+        carrinho.setUsuario(usuario);
 
         cRepository.save(carrinho);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/carrinho")
-    public ResponseEntity<Carrinho> vercarrinho(Authentication authentication) {
+    public ResponseEntity<?> vercarrinho(Authentication authentication) {
         Usuario user = (Usuario) authentication.getPrincipal();
         Usuario usuario = uRepository.findById(user.getId()).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
-        return ResponseEntity.ok(cRepository.findByUsuario(usuario));
+        List<Carrinho> carrinhos = cRepository.findByUsuario(usuario);
+        return ResponseEntity.ok(carrinhos);
     }
 
     @DeleteMapping("/carrinho")
