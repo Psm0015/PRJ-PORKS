@@ -93,6 +93,8 @@ public class AdminController {
         try {
             Produto prdb = pRepository.findById(prd.getId()).get();
             prdb.setIngredientes(prd.getIngredientes());
+            prdb.setPreco(prd.getPreco());
+            prdb.setCategoria(prd.getCategoria());
             prdb.setNome(prd.getNome());
             pRepository.save(prdb);
             return ResponseEntity.ok().body("Produto editado com sucesso!");

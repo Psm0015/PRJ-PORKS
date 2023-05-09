@@ -44,7 +44,7 @@
                     <form>
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="nomemd" name="nome" placeholder="nome do prato">
+                            <input type="text" class="form-control" id="nomemd" name="nome" placeholder="nome do produto">
                         </div>
                         <div class="form-group">
                             <label for="ingredientes">Ingredientes</label>
@@ -69,6 +69,43 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="editprd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Editar Produto</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nomeed">Nome</label>
+                            <input type="text" class="form-control" id="nomeed" name="nome" placeholder="nome do produto">
+                        </div>
+                        <div class="form-group">
+                            <label for="ingredientesed">Ingredientes</label>
+                            <input type="text" class="form-control" id="ingredientesed" name="ingredientes"
+                                placeholder="ingredientes do prato">
+                        </div>
+                        <div class="form-group">
+                            <label for="categoriaed">categoria</label>
+                            <select class="form-select" id="categoriaed">
+                                <option value="ALIMENTO" selected>Alimento</option>
+                                <option value="BEBIDA">Bebida</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="precoed">Preço (R$):</label>
+                            <input type="number" class="form-control" id="precoed" placeholder="Insira o preço em reais">
+                        </div>
+                        <br>
+                        <a onclick="editarprd()" class="btn btn-primary">Enviar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -35,7 +35,8 @@ function carregatb() {
             tbdata += `<td>${prd.ingredientes}</td>`
             tbdata += `<td>${formatarReal(prd.preco)}</td>`
             tbdata += `<td>${prd.categoria}</td>`
-            tbdata += `<td><i onclick='deletarprd(${prd.id})' style='color: red;cursor: pointer;' class="fa fa-trash" aria-hidden="true"></i></td>`
+            tbdata += `<td><i onclick='deletarprd(${prd.id})' style='color: red;cursor: pointer;' class="fa fa-trash" aria-hidden="true"></i>`
+            tbdata += `    <i onclick='editarprdmdn(${prd.id},"${prd.nome}","${prd.ingredientes}",${prd.preco},"${prd.categoria}")' style='color: #0dcaf0;cursor: pointer;' class="fa-regular fa-pen-to-square"></i></td>`
             tbdata += '</tr>'
         }
         document.getElementById('tabela').innerHTML = tbdata
@@ -102,6 +103,51 @@ function deletarprd(id) {
                 icon: 'success',
                 title: 'Produto Apagado!'
             })
+        },
+        error: function (response) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Ocorreu um erro ao apagar o produto!',
+            })
+        }
+    });
+}
+function editarprdmdn(id,nome,ingredientes,preco,categoria) {
+    sessionStorage.setItem('id',id)
+    $('#nomeed').val(nome);
+    $('#ingredientesed').val(ingredientes);
+    $('#categoriaed').val(categoria);
+    $('#precoed').val(preco);
+    $('#editprd').modal('show')
+}
+
+function editarprd() {
+    id = sessionStorage.getItem('id');
+    const data = JSON.stringify({
+        "id":id,
+        "nome": document.getElementById('nomeed').value,
+        "ingredientes": document.getElementById('ingredientesed').value,
+        "preco": document.getElementById('precoed').value,
+        "categoria": document.getElementById('categoriaed').value
+    });
+
+    $.ajax({
+        url: "admin/editarprd",
+        method: "PUT",
+        data: data,
+        contentType: "application/json",
+        headers: {
+            "cookie": "JSESSIONID=DE5FA346853874788469CE9BCBEFDEC5",
+            "Authorization": `Bearer ${sessionStorage.getItem("token")}`
+        },
+        success: function () {
+            carregatb()
+            document.getElementById('nomeed').value = ''
+            document.getElementById('ingredientesed').value = ''
+            document.getElementById('categoriaed').value = ''
+            document.getElementById('precoed').value = ''
+            $('#editprd').modal('hide')
         },
         error: function (response) {
             Swal.fire({
